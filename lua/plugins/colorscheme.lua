@@ -37,13 +37,14 @@ return {
         -- noice = true,
         -- notify = true,
         -- semantic_tokens = true,
-        -- telescope = true,
+        telescope = true,
         treesitter = true,
         treesitter_context = true,
         which_key = true,
       },
     },
     config = function()
+      vim.opt.termguicolors = true
       vim.cmd.colorscheme "catppuccin"
     end
   }
