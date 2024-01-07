@@ -38,7 +38,7 @@ spec = {
 }
 
 require("lazy").setup({
-    spec = "plugins",
+    spec = spec,
     install = {
         colorscheme = {"catppuccin", "habamax"},
     },
