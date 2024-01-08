@@ -1,6 +1,6 @@
-# My NeoVim Personal Dev Env Config
+# nvim
+## (My neovim personal development environment config)
 
-Config for my personal use.
 While creating the config I had following things in mind:
 * Don't complicate where not required, try to find a more simpler solution
 * Minimal configuration. Use neovim and not plugins. This following the above rule.
