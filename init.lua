@@ -16,7 +16,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
 
-spec = {
+local spec = {
+    { 'folke/which-key.nvim', config = true },
     { "nvim-lua/plenary.nvim", lazy = true },
     {
         "dstein64/vim-startuptime",
@@ -25,7 +26,7 @@ spec = {
           vim.g.startuptime_tries = 10
         end,
     },
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", config = true },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -34,6 +35,16 @@ spec = {
     "github/copilot.vim",
     "laytan/cloak.nvim",
     "tpope/vim-fugitive",
+    {
+        "folke/trouble.nvim",
+        -- opts will be merged with the parent spec
+        opts = { use_diagnostic_signs = true },
+    },
+    {
+        'j-hui/fidget.nvim',
+        event = 'LspAttach',
+        config = true,
+    },
     { import = "plugins" },
 }
 
