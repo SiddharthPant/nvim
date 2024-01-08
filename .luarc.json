@@ -2,7 +2,7 @@
     "runtime.version": "LuaJIT",
     "runtime.path": [
         "./?.lua",
-        "./?/init.lua",
+        "./?/init.lua"
     ],
     "diagnostics.globals": [
         "vim"
@@ -10,6 +10,6 @@
     "workspace.checkThirdParty": false,
     "workspace.library": [
         "/usr/share/nvim/runtime/lua",
-        "./lua",
-    ],
+        "./lua"
+    ]
 }
