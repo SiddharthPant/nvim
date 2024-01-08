@@ -1,5 +1,5 @@
 # nvim
-## (My neovim personal development environment config)
+My neovim personal development environment config
 
 While creating the config I had following things in mind:
 * Don't complicate where not required, try to find a more simpler solution

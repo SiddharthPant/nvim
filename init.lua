@@ -38,11 +38,6 @@ local spec = {
     -- opts will be merged with the parent spec
     opts = { use_diagnostic_signs = true },
   },
-  {
-    'j-hui/fidget.nvim',
-    event = 'LspAttach',
-    config = true,
-  },
   { import = "plugins" },
 }
 

@@ -14,6 +14,11 @@ return {
       "hrsh7th/cmp-nvim-lua",
       "L3MON4D3/LuaSnip",
       "rafamadriz/friendly-snippets",
+      -- Useful status updates for LSP
+      { 'j-hui/fidget.nvim', event = "LSPAttach", config = true },
+
+      -- Additional lua configuration, makes nvim stuff amazing!
+      'folke/neodev.nvim',
     },
     config = function()
       local lsp_zero = require("lsp-zero")
@@ -90,7 +95,7 @@ return {
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
           ['<C-Space>'] = cmp.mapping.complete(),
-          ['<CR>'] = cmp.mapping.confirm({ select = true }),           -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         }),
         -- mapping = cmp.mapping.preset.insert({
         --     ['<C-p>'] = cmp.SelectPrevItem(),
