@@ -5,15 +5,26 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 -- General settings
 
--- Highlight on yank
-autocmd("TextYankPost", {
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = augroup('YankHighlight', { clear = true })
+autocmd('TextYankPost', {
   callback = function()
-    vim.highlight.on_yank({
-      higroup = "IncSearch",
-      timeout = "1000"
-    })
-  end
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
 })
+
+-- Highlight on yank
+-- autocmd("TextYankPost", {
+--   callback = function()
+--     vim.highlight.on_yank({
+--       higroup = "IncSearch",
+--       timeout = "1000"
+--     })
+--   end
+-- })
 
 -- Remove whitespace on save
 autocmd("BufWritePre", {
