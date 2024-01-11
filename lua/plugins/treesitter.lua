@@ -9,7 +9,6 @@ return {
       ensure_installed = {
         'bash',
         'python',
-        'tsx',
         'lua',
         'javascript',
         'typescript',
@@ -29,7 +28,7 @@ return {
         'prisma',
       },
       highlight = { enable = true },
-      auto_install = true,
+      auto_install = false,
       indent = { enable = true },
       incremental_selection = {
         enable = true,

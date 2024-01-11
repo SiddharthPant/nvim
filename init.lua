@@ -34,7 +34,6 @@ local spec = {
     opts = { theme = "catppuccin" }
   },
   "github/copilot.vim",
-  "laytan/cloak.nvim",
   "tpope/vim-fugitive",
   {
     "folke/trouble.nvim",
