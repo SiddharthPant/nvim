@@ -12,11 +12,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.opt.termguicolors = true
 
 local spec = {
   { 'folke/which-key.nvim',  config = true },
   { "nvim-lua/plenary.nvim", lazy = true },
+  -- Detect tabstop and shiftwidth automatically
+  "tpope/vim-sleuth",
   {
     "dstein64/vim-startuptime",
     cmd = "StartupTime",
