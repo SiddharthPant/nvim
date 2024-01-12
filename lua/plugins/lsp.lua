@@ -92,7 +92,7 @@ return {
 				html = { filetypes = { "html", "twig", "hbs" } },
 				jsonls = {},
 				dockerls = {},
-				bashls = {},
+				-- bashls = {},
 				yamlls = {},
 				prismals = {},
 				graphql = {},
