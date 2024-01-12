@@ -7,13 +7,13 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
-local highlight_group = augroup('YankHighlight', { clear = true })
-autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
+local highlight_group = augroup("YankHighlight", { clear = true })
+autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = "*",
 })
 
 -- Highlight on yank
@@ -28,8 +28,8 @@ autocmd('TextYankPost', {
 
 -- Remove whitespace on save
 autocmd("BufWritePre", {
-  pattern = "",
-  command = ":%s/\\s\\+$//e"
+	pattern = "",
+	command = ":%s/\\s\\+$//e",
 })
 
 -- Auto format on save using the attached (optionally filtered) language servere clients
@@ -41,27 +41,27 @@ autocmd("BufWritePre", {
 
 -- Don"t auto commenting new lines
 autocmd("BufEnter", {
-  pattern = "",
-  command = "set fo-=c fo-=r fo-=o"
+	pattern = "",
+	command = "set fo-=c fo-=r fo-=o",
 })
 
 autocmd("Filetype", {
-  pattern = { "xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yaml", "lua", "prisma" },
-  command = "setlocal shiftwidth=2 tabstop=2"
+	pattern = { "xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yaml", "lua", "prisma" },
+	command = "setlocal shiftwidth=2 tabstop=2",
 })
 
 -- Set colorcolumn
 autocmd("Filetype", {
-  pattern = { "python", "rst", "c", "cpp" },
-  command = "set colorcolumn=80"
+	pattern = { "python", "rst", "c", "cpp" },
+	command = "set colorcolumn=80",
 })
 
 autocmd("Filetype", {
-  pattern = { "gitcommit", "markdown", "text" },
-  callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.spell = true
-  end
+	pattern = { "gitcommit", "markdown", "text" },
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.opt_local.spell = true
+	end,
 })
 
 -- vim.filetype.add({
