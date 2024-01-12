@@ -18,6 +18,7 @@ vim.opt.termguicolors = true
 local spec = {
   { 'folke/which-key.nvim',  config = true },
   { "nvim-lua/plenary.nvim", lazy = true },
+  "nvim-tree/nvim-web-devicons",
   -- Detect tabstop and shiftwidth automatically
   "tpope/vim-sleuth",
   {
@@ -30,16 +31,10 @@ local spec = {
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", config = true },
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = { theme = "catppuccin" }
   },
   "github/copilot.vim",
   "tpope/vim-fugitive",
-  {
-    "folke/trouble.nvim",
-    -- opts will be merged with the parent spec
-    opts = { use_diagnostic_signs = true },
-  },
   { import = "plugins" },
 }
 
