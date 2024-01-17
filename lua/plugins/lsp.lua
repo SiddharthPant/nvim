@@ -142,6 +142,7 @@ return {
 					null_ls.builtins.formatting.shellharden,
 					null_ls.builtins.formatting.shfmt,
 					null_ls.builtins.diagnostics.ruff,
+					null_ls.builtins.formatting.ruff,
 				},
 			})
 			-- Install whatever is configured in null ls config
