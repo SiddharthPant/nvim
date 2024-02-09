@@ -1,7 +1,7 @@
 local cmd = vim.cmd
 local o = vim.opt
-local g = vim.g
-local s = vim.s
+-- local g = vim.g
+-- local s = vim.s
 local indent = 4
 
 cmd([[

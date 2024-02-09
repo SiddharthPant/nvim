@@ -29,10 +29,10 @@ local spec = {
 		end,
 	},
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", config = true },
-	{
-		"nvim-lualine/lualine.nvim",
-		opts = { theme = "catppuccin" },
-	},
+ 	{
+ 		"nvim-lualine/lualine.nvim",
+ 		opts = { theme = "catppuccin" },
+ 	},
 	"github/copilot.vim",
 	"tpope/vim-fugitive",
 	{ import = "plugins" },
