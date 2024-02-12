@@ -7,7 +7,7 @@ return {
 		config = function(_)
 			local colors = require("catppuccin.palettes").get_palette()
 			require("catppuccin").setup({
-				flavor = "latte",
+				flavor = "mocha",
 				transparent_background = true,
 				integrations = {
 					-- aerial = true,
@@ -56,7 +56,7 @@ return {
 				},
 			})
 			vim.opt.termguicolors = true
-			vim.cmd.colorscheme("catppuccin-latte")
+			vim.cmd.colorscheme("catppuccin-mocha")
 		end,
 	},
 }
