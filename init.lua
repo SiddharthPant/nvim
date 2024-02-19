@@ -31,7 +31,16 @@ local spec = {
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", config = true },
  	{
  		"nvim-lualine/lualine.nvim",
- 		opts = { theme = "catppuccin" },
+		config = function()
+			require('lualine').setup({
+				options = {
+					theme = "catppuccin",
+					icons_enabled = false,
+					section_separators = '',
+					component_separators = '|',
+				}
+			})
+		end,
  	},
 	"github/copilot.vim",
 	"tpope/vim-fugitive",
