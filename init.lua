@@ -18,7 +18,7 @@ vim.opt.termguicolors = true
 local spec = {
 	{ "folke/which-key.nvim", config = true },
 	{ "nvim-lua/plenary.nvim", lazy = true },
-	"nvim-tree/nvim-web-devicons",
+	-- "nvim-tree/nvim-web-devicons",
 	-- Detect tabstop and shiftwidth automatically
 	"tpope/vim-sleuth",
 	{
