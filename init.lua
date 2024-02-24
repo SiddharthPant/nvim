@@ -43,6 +43,7 @@ local spec = {
 		end,
  	},
 	"github/copilot.vim",
+	"tpope/vim-rhubarb",
 	"tpope/vim-fugitive",
 	{ import = "plugins" },
 }
