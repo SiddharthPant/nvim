@@ -82,4 +82,3 @@ o.undoreload = 10000
 -- o.foldmethod = "marker" -- fold based on markers
 -- o.foldlevel = 99
 
-cmd.colorscheme("catppuccin")

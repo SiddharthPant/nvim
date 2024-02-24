@@ -34,7 +34,7 @@ local spec = {
 		config = function()
 			require('lualine').setup({
 				options = {
-					theme = "catppuccin",
+					theme = "onedark",
 					icons_enabled = false,
 					section_separators = '',
 					component_separators = '|',
@@ -50,7 +50,7 @@ local spec = {
 require("lazy").setup({
 	spec = spec,
 	install = {
-		colorscheme = { "catppuccin", "habamax" },
+		colorscheme = { "onedark", "habamax" },
 	},
 	checker = {
 		enabled = true,

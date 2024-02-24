@@ -37,12 +37,14 @@ return {
 				nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 				nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
-				nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-				nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-				nmap("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-				nmap("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-				nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
-				nmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+				telescope_builtin = require("telescope.builtin")
+
+				nmap("gd", telescope_builtin.lsp_definitions, "[G]oto [D]efinition")
+				nmap("gr", telescope_builtin.lsp_references, "[G]oto [R]eferences")
+				nmap("gI", telescope_builtin.lsp_implementations, "[G]oto [I]mplementation")
+				nmap("<leader>D", telescope_builtin.lsp_type_definitions, "Type [D]efinition")
+				nmap("<leader>ds", telescope_builtin.lsp_document_symbols, "[D]ocument [S]ymbols")
+				nmap("<leader>ws", telescope_builtin.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 
 				-- See `:help K` for why this keymap
 				nmap("K", vim.lsp.buf.hover, "Hover Documentation")
@@ -92,10 +94,12 @@ return {
 				html = { filetypes = { "html", "twig", "hbs" } },
 				jsonls = {},
 				dockerls = {},
-				-- bashls = {},
+				bashls = {},
 				yamlls = {},
 				prismals = {},
 				graphql = {},
+				ruff_lsp = {},
+				eslint = {},
 
 				lua_ls = {
 					Lua = {
@@ -137,12 +141,8 @@ return {
 				sources = {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.prettier,
-					null_ls.builtins.diagnostics.eslint_d,
-					null_ls.builtins.code_actions.shellcheck,
 					null_ls.builtins.formatting.shellharden,
 					null_ls.builtins.formatting.shfmt,
-					null_ls.builtins.diagnostics.ruff,
-					null_ls.builtins.formatting.ruff,
 				},
 			})
 			-- Install whatever is configured in null ls config
