@@ -36,8 +36,12 @@ return {
 
 				nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 				nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+				nmap("<space>e", vim.diagnostic.open_float, "[E]xplore diagnostics")
+				nmap("[d", vim.diagnostic.goto_prev, "Next diagnostic")
+				nmap("]d", vim.diagnostic.goto_next, "Previous diagnostic")
+				nmap("<space>q", vim.diagnostic.setloclist, "Location [q]uick list")
 
-				telescope_builtin = require("telescope.builtin")
+				local telescope_builtin = require("telescope.builtin")
 
 				nmap("gd", telescope_builtin.lsp_definitions, "[G]oto [D]efinition")
 				nmap("gr", telescope_builtin.lsp_references, "[G]oto [R]eferences")
