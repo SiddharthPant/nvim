@@ -32,6 +32,13 @@ local spec = {
 	"github/copilot.vim",
 	"tpope/vim-rhubarb",
 	"tpope/vim-fugitive",
+	{
+		"otavioschwanck/arrow.nvim",
+		opts = {
+			show_icons = true,
+			leader_key = ";", -- Recommended to be a single key
+		},
+	},
 	{ import = "plugins" },
 }
 
