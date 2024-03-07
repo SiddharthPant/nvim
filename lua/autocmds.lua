@@ -4,27 +4,18 @@ local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 -- General settings
+--  See `:help lua-guide-autocommands`
 
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
-local highlight_group = augroup("YankHighlight", { clear = true })
-autocmd("TextYankPost", {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = "*",
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
-
--- Highlight on yank
--- autocmd("TextYankPost", {
---   callback = function()
---     vim.highlight.on_yank({
---       higroup = "IncSearch",
---       timeout = "1000"
---     })
---   end
--- })
 
 -- Remove whitespace on save
 autocmd("BufWritePre", {
@@ -45,24 +36,24 @@ autocmd("BufEnter", {
 	command = "set fo-=c fo-=r fo-=o",
 })
 
-autocmd("Filetype", {
-	pattern = { "xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yaml", "lua", "prisma" },
-	command = "setlocal shiftwidth=2 tabstop=2",
-})
-
--- Set colorcolumn
-autocmd("Filetype", {
-	pattern = { "python", "rst", "c", "cpp" },
-	command = "set colorcolumn=80",
-})
-
-autocmd("Filetype", {
-	pattern = { "gitcommit", "markdown", "text" },
-	callback = function()
-		vim.opt_local.wrap = true
-		vim.opt_local.spell = true
-	end,
-})
+-- autocmd("Filetype", {
+-- 	pattern = { "xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yaml", "lua", "prisma" },
+-- 	command = "setlocal shiftwidth=2 tabstop=2",
+-- })
+--
+-- -- Set colorcolumn
+-- autocmd("Filetype", {
+-- 	pattern = { "python", "rst", "c", "cpp" },
+-- 	command = "set colorcolumn=80",
+-- })
+--
+-- autocmd("Filetype", {
+-- 	pattern = { "gitcommit", "markdown", "text" },
+-- 	callback = function()
+-- 		vim.opt_local.wrap = true
+-- 		vim.opt_local.spell = true
+-- 	end,
+-- })
 
 -- vim.filetype.add({
 --   -- Detect and assign filetype based on the extension of the filename
