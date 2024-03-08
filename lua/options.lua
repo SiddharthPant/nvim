@@ -89,7 +89,7 @@ o.writebackup = false -- if a file is being edited by another program (or was wr
 o.completeopt = { 'menu', 'menuone', 'noselect' } -- better completion
 o.shortmess:append 'c' -- don't pass messages to |ins-completion-menu|. This hides the extra message displayed by completion plugins and gives a better experience
 
-o.termguicolors = true -- set term gui colors most terminals support this
+o.modifiable = true
 
 -- fold
 -- o.foldmethod = "marker" -- fold based on markers
