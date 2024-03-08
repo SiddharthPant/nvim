@@ -43,13 +43,13 @@ local spec = {
   'github/copilot.vim',
   'tpope/vim-rhubarb',
   'tpope/vim-fugitive',
-  -- {
-  -- 	"otavioschwanck/arrow.nvim",
-  -- 	opts = {
-  -- 		show_icons = true,
-  -- 		leader_key = ";", -- Recommended to be a single key
-  -- 	},
-  -- },
+  {
+    'otavioschwanck/arrow.nvim',
+    opts = {
+      show_icons = true,
+      leader_key = ',', -- Recommended to be a single key
+    },
+  },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', opts = { signs = false } },
   { import = 'plugins' },
