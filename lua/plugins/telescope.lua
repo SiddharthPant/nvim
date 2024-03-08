@@ -2,7 +2,7 @@ return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
     'nvim-telescope/telescope-symbols.nvim',
-    -- "nvim-telescope/telescope-file-browser.nvim",
+    'nvim-telescope/telescope-file-browser.nvim',
     {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
@@ -87,21 +87,21 @@ return {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
         },
-        -- file_browser = {
-        -- 	initial_mode = "normal",
-        -- 	hijack_netrw = true,
-        -- 	hidden = true,
-        -- 	grouped = true,
-        -- 	path = "%:p:h",
-        -- 	cwd = "%:p:h",
-        -- 	respect_gitignore = false,
-        -- 	-- dir_icon = "",
-        -- },
+        file_browser = {
+          initial_mode = 'normal',
+          hijack_netrw = false,
+          hidden = true,
+          grouped = true,
+          path = '%:p:h',
+          cwd = '%:p:h',
+          respect_gitignore = false,
+          -- dir_icon = "",
+        },
       },
     }
 
     require('telescope').load_extension 'fzf'
-    -- require("telescope").load_extension("file_browser")
+    require('telescope').load_extension 'file_browser'
     pcall(require('telescope').load_extension, 'ui-select')
 
     -- See `:help telescope.builtin`
@@ -113,7 +113,7 @@ return {
     vim.keymap.set('n', '<leader>fb', builtin.builtin, { desc = '[F]ind Select [T]elescope' })
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live Grep' })
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
-    vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = 'Old Files' })
+    vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = 'Old Files' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Buffers' })
     vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'Commands' })
     vim.keymap.set('n', '<leader>fr', builtin.registers, { desc = 'Registers' })
@@ -124,7 +124,7 @@ return {
     vim.keymap.set('n', '<leader>fl', builtin.loclist, { desc = 'Location List' })
     vim.keymap.set('n', '<leader>f:', builtin.commands, { desc = 'Commands' })
     vim.keymap.set('n', '<leader>fp', builtin.git_files, { desc = 'Git Files' })
-    -- vim.keymap.set("n", "<leader>fe", ":Telescope file_browser<CR>", { desc = "File Browser", noremap = true })
+    vim.keymap.set('n', '<leader>fo', ':Telescope file_browser<CR>', { desc = '[F]ind [O]pen File Browser', noremap = true })
     vim.keymap.set('n', '<leader>fj', builtin.resume, { desc = 'Resume last picker', noremap = true })
 
     -- Slightly advanced example of overriding default behavior and theme
