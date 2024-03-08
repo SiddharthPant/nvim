@@ -116,7 +116,7 @@ return {
     vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = 'Old Files' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Buffers' })
     vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'Commands' })
-    vim.keymap.set('n', '<leader>fr', builtin.registers, { desc = 'Registers' })
+    vim.keymap.set('n', '<leader>fj', builtin.registers, { desc = '[J] Registers' })
     vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'Document Symbols' })
     vim.keymap.set('n', '<leader>fw', builtin.lsp_workspace_symbols, { desc = 'Workspace Symbols' })
     vim.keymap.set('n', '<leader>ft', builtin.filetypes, { desc = 'File Types' })
@@ -124,8 +124,8 @@ return {
     vim.keymap.set('n', '<leader>fl', builtin.loclist, { desc = 'Location List' })
     vim.keymap.set('n', '<leader>f:', builtin.commands, { desc = 'Commands' })
     vim.keymap.set('n', '<leader>fp', builtin.git_files, { desc = 'Git Files' })
+    vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[R]esume last picker', noremap = true })
     vim.keymap.set('n', '<leader>fo', ':Telescope file_browser<CR>', { desc = '[F]ind [O]pen File Browser', noremap = true })
-    vim.keymap.set('n', '<leader>fj', builtin.resume, { desc = 'Resume last picker', noremap = true })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
