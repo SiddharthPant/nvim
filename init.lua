@@ -44,6 +44,25 @@ local spec = {
   'tpope/vim-rhubarb',
   'tpope/vim-fugitive',
   {
+    'NeogitOrg/neogit',
+    dependencies = {
+      -- 'nvim-lua/plenary.nvim', -- required
+      'sindrets/diffview.nvim', -- optional - Diff integration
+
+      -- Only one of these is needed, not both.
+      -- 'nvim-telescope/telescope.nvim', -- optional
+      -- 'ibhagwan/fzf-lua', -- optional
+    },
+    config = function()
+      require('neogit').setup {
+        -- disable_commit_confirmation = true,
+        -- disable_builtin_notifications = true,
+        -- disable_signs = false,
+        -- disable_context_highlighting = false,
+      }
+    end,
+  },
+  {
     'otavioschwanck/arrow.nvim',
     opts = {
       show_icons = true,

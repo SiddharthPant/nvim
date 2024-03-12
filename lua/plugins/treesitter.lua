@@ -16,6 +16,7 @@ return {
           'markdown',
           'bash',
           'python',
+          'htmldjango',
           'lua',
           'javascript',
           'typescript',

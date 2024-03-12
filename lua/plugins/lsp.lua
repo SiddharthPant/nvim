@@ -137,6 +137,7 @@ return {
         prismals = {},
         graphql = {},
         ruff_lsp = {},
+        djlint = {},
         eslint = {},
         lua_ls = {
           -- cmd = {...},
