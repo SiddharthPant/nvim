@@ -2,7 +2,7 @@ return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
     'nvim-telescope/telescope-symbols.nvim',
-    'nvim-telescope/telescope-file-browser.nvim',
+    -- 'nvim-telescope/telescope-file-browser.nvim',
     {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
@@ -87,21 +87,21 @@ return {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
         },
-        file_browser = {
-          initial_mode = 'normal',
-          hijack_netrw = false,
-          hidden = true,
-          grouped = true,
-          path = '%:p:h',
-          cwd = '%:p:h',
-          respect_gitignore = false,
-          -- dir_icon = "",
-        },
+        -- file_browser = {
+        --   initial_mode = 'normal',
+        --   hijack_netrw = false,
+        --   hidden = true,
+        --   grouped = true,
+        --   path = '%:p:h',
+        --   cwd = '%:p:h',
+        --   respect_gitignore = false,
+        --   -- dir_icon = "",
+        -- },
       },
     }
 
     require('telescope').load_extension 'fzf'
-    require('telescope').load_extension 'file_browser'
+    -- require('telescope').load_extension 'file_browser'
     pcall(require('telescope').load_extension, 'ui-select')
 
     -- See `:help telescope.builtin`
@@ -125,7 +125,7 @@ return {
     vim.keymap.set('n', '<leader>f:', builtin.commands, { desc = 'Commands' })
     vim.keymap.set('n', '<leader>fp', builtin.git_files, { desc = 'Git Files' })
     vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[R]esume last picker', noremap = true })
-    vim.keymap.set('n', '<leader>fo', ':Telescope file_browser<CR>', { desc = '[F]ind [O]pen File Browser', noremap = true })
+    -- vim.keymap.set('n', '<leader>fo', ':Telescope file_browser<CR>', { desc = '[F]ind [O]pen File Browser', noremap = true })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
