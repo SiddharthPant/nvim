@@ -3,6 +3,7 @@ return {
   'tpope/vim-fugitive',
   {
     'NeogitOrg/neogit',
+    cmd = 'Neogit',
     dependencies = {
       -- 'nvim-lua/plenary.nvim', -- required
       'sindrets/diffview.nvim', -- optional - Diff integration
