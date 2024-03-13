@@ -14,7 +14,7 @@ return {
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
           return '(' .. count .. ')'
         end,
-        -- separator_style = 'slant',
+        separator_style = 'slant',
       },
     }
   end,
