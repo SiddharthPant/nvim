@@ -1,6 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
+    'isak102/telescope-git-file-history.nvim',
     'nvim-telescope/telescope-symbols.nvim',
     -- 'nvim-telescope/telescope-file-browser.nvim',
     {
@@ -14,10 +15,11 @@ return {
   },
   -- keys = keys,
   config = function()
+    local telescope = require 'telescope'
     local actions = require 'telescope.actions'
     local trouble = require 'trouble.providers.telescope'
 
-    require('telescope').setup {
+    telescope.setup {
       defaults = {
         sorting_strategy = 'descending',
         initial_mode = 'insert',
@@ -100,9 +102,10 @@ return {
       },
     }
 
-    require('telescope').load_extension 'fzf'
-    -- require('telescope').load_extension 'file_browser'
-    pcall(require('telescope').load_extension, 'ui-select')
+    telescope.load_extension 'fzf'
+    -- telescope.load_extension 'file_browser'
+    pcall(telescope.load_extension, 'ui-select')
+    telescope.load_extension 'git_file_history'
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
@@ -113,7 +116,8 @@ return {
     vim.keymap.set('n', '<leader>fb', builtin.builtin, { desc = '[F]ind Select [T]elescope' })
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live Grep' })
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
-    vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = 'Old Files' })
+    vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = 'Old Files' })
+    vim.keymap.set('n', '<leader>f.', telescope.extensions.git_file_history.git_file_history, { desc = 'File git history' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Buffers' })
     vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'Commands' })
     vim.keymap.set('n', '<leader>fj', builtin.registers, { desc = '[J] Registers' })
