@@ -17,7 +17,7 @@ return {
   config = function()
     local telescope = require 'telescope'
     local actions = require 'telescope.actions'
-    local trouble = require 'trouble.providers.telescope'
+    local trouble = require 'trouble.sources.telescope'
 
     telescope.setup {
       defaults = {
@@ -40,10 +40,10 @@ return {
             ['v'] = actions.file_vsplit,
             ['<S-k>'] = actions.preview_scrolling_up,
             ['<S-j>'] = actions.preview_scrolling_down,
-            ['<c-t>'] = trouble.open_with_trouble,
+            ['<c-t>'] = trouble.open,
           },
           i = {
-            ['<c-t>'] = trouble.open_with_trouble,
+            ['<c-t>'] = trouble.open,
             ['<C-v>'] = actions.file_vsplit,
             ['<S-k>'] = actions.preview_scrolling_up,
             ['<S-j>'] = actions.preview_scrolling_down,
