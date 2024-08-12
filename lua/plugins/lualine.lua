@@ -3,7 +3,7 @@ return {
   config = function()
     require('lualine').setup {
       options = {
-        theme = 'modus',
+        theme = 'catppuccin',
         icons_enabled = true,
       },
       sections = {

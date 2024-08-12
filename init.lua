@@ -58,7 +58,7 @@ local spec = {
 require('lazy').setup {
   spec = spec,
   install = {
-    colorscheme = { 'modus', 'habamax' },
+    colorscheme = { 'catppuccin', 'habamax' },
   },
   checker = {
     enabled = true,
