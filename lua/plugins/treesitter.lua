@@ -35,6 +35,7 @@ return {
           'comment',
           'graphql',
           'prisma',
+          'php',
         },
         highlight = { enable = true },
         auto_install = true,

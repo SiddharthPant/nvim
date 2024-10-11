@@ -128,7 +128,6 @@ return {
         gopls = {},
         pyright = {},
         rust_analyzer = {},
-        tsserver = {},
         html = { filetypes = { 'html', 'twig', 'hbs' } },
         jsonls = {},
         dockerls = {},
@@ -139,6 +138,7 @@ return {
         ruff_lsp = {},
         djlint = {},
         eslint = {},
+        intelephense = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes { ...},
