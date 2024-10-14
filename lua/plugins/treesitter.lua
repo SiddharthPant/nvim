@@ -27,6 +27,7 @@ return {
           'json',
           'yaml',
           'go',
+          'gotmpl',
           'rust',
           'c',
           'cpp',
@@ -101,6 +102,18 @@ return {
       --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
       --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+
+      vim.filetype.add {
+        extension = {
+          gotmpl = 'gotmpl',
+        },
+        pattern = {
+          ['.*/templates/.*%.tpl'] = 'helm',
+          ['.*/templates/.*%.ya?ml'] = 'helm',
+          ['.*/templates/.*%.html?'] = 'helm',
+          ['helmfile.*%.ya?ml'] = 'helm',
+        },
+      }
     end,
   },
   { 'nvim-treesitter/nvim-treesitter-context' },
