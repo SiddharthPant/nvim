@@ -26,6 +26,8 @@ return { -- Autoformat
       formatters_by_ft = {
         lua = { 'stylua' },
         python = { 'ruff_format' },
+        php = { { 'pint', 'php_cs_fixer' } },
+        javascript = { { 'prettierd', 'prettier' } },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
