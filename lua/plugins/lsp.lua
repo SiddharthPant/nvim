@@ -135,7 +135,7 @@ return {
         yamlls = {},
         prismals = {},
         graphql = {},
-        ruff_lsp = {},
+        ruff = {},
         djlint = {},
         eslint = {},
         intelephense = {},
