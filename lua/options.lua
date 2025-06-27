@@ -46,7 +46,7 @@ o.listchars = {
 
 o.inccommand = 'split' -- Preview substitutions live, as you type!
 
-o.cursorline = true -- highlight the current line
+-- o.cursorline = true -- highlight the current line
 
 o.scrolloff = 18 -- minimal number of screen lines to keep above and below the cursor
 o.sidescrolloff = 3 -- minimal number of screen columns to keep to the left and to the right of the cursor
@@ -75,7 +75,7 @@ o.wildmenu = true -- visual autocomplete for command menu
 -- appearance
 o.laststatus = 2 -- always display the status line
 o.cmdheight = 1 -- more space in the neovim command line for displaying messages
-o.colorcolumn = '80' -- highlight the 80th column
+-- o.colorcolumn = '80' -- highlight the 80th column
 o.hidden = true -- required to keep multiple buffers open multiple buffers
 o.lazyredraw = true -- faster scrolling
 o.wrap = false -- display lines as one long line
