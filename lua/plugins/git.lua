@@ -1,6 +1,7 @@
 return {
   'tpope/vim-rhubarb',
   'tpope/vim-fugitive',
+  'kdheepak/lazygit.nvim',
   {
     'NeogitOrg/neogit',
     cmd = 'Neogit',
