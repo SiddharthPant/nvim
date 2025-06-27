@@ -43,7 +43,7 @@ local spec = {
     end,
   },
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', config = true },
-  'github/copilot.vim',
+  -- 'github/copilot.vim',
   {
     'otavioschwanck/arrow.nvim',
     opts = {
